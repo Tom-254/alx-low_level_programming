@@ -5,3 +5,4 @@
 - 4-puts.c ==>	C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line
 - 5-printf.c ==>	with proper grammar, but the outcome is a piece of art,
 - 6-size.c ==>	prints the size of various types on the computer it is compiled and run on.
+- 100-intel ==>	runs a C file through the preprocessor and save the result into another file
