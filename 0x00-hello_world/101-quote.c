@@ -8,8 +8,10 @@
 
 int main(void)
 {
-	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	
+	char *ptr = str;
 
-	fwrite(str, sizeof(str), 1, stderr);
+	fwrite(ptr, sizeof(str), 1, stderr);
 	return (1);
 }
