@@ -18,6 +18,5 @@ int main(void)
 		write(1, &str[count], 1);
 		count++;
 	}
-	putchar(10);
 	return (0);
 }
