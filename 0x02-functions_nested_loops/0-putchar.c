@@ -12,12 +12,13 @@ int main(void)
 	char str[] = "_putchar";
 	int count = 0;
 	int size = sizeof(str);
+	char newline = '\n';
 
 	while (count < size)
 	{
 		write(1, &str[count], 1);
 		count++;
 	}
-	putchar(10);
+	write(1, &newline, 1);
 	return (0);
 }
