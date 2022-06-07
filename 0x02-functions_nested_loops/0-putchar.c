@@ -1,3 +1,4 @@
+#include <string.h>
 #include "main.h"
 
 /**
@@ -7,13 +8,16 @@
  */
 int main(void)
 {
-	_putchar('-');
-	_putchar('p');
-	_putchar('u');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char str[] = "_putchar";
+	int count = 0;
+	int size = sizeof(str);
+
+	while (count <= size)
+	{
+		if (str[count] == '\0')
+			_putchar('\n');
+		_putchar(str[count]);
+		count++;
+	}
 	return (0);
 }
