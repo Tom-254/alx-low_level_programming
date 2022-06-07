@@ -5,3 +5,4 @@
 - 4-isalpha.c ==>	checks for alphabetic character.
 - 5-sign.c ==>	 prints the sign of a number
 - 6-abs.c ==>	 computes the absolute value of an integer
+- 10-add.c ==>	adds two integers and returns the result.
