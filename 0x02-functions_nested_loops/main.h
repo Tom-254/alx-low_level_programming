@@ -5,13 +5,4 @@
  *
  * Return: On success 1.
  */
-void print_alphabet(void)
-{
-	char c = 'a';
-	while (c < 'z')
-	{
-		putchar(c);
-		c++;
-	}
-	putchar('\n');
-}
+void print_alphabet(void);
