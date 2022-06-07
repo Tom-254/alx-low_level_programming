@@ -14,9 +14,10 @@ int main(void)
 
 	while (count <= size)
 	{
-		if (str[count] == '\0')
+		if (str[count] != '\0')
+			putchar(str[count]);
+		else
 			putchar('\n');
-		putchar(str[count]);
 		count++;
 	}
 	return (0);
