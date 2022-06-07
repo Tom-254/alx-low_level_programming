@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - writes the character c to stdout
@@ -14,8 +15,8 @@ int main(void)
 	while (count <= size)
 	{
 		if (str[count] == '\0')
-			_putchar('\n');
-		_putchar(str[count]);
+			putchar('\n');
+		putchar(str[count]);
 		count++;
 	}
 	return (0);
