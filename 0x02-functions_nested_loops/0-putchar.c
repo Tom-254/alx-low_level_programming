@@ -11,6 +11,7 @@ int main(void)
 {
 	char str[] = "_putchar";
 	int count = 0;
+	int size = sizeof(str);
 
 	while (count < size)
 	{
@@ -30,5 +31,5 @@ int main(void)
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+		return (write(1, &c, 1));
 }
