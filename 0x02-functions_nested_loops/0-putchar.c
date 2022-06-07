@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char str[] = "_putchar";
+	char str[] = "_putchar\n";
 	int count = 0;
 	int size = sizeof(str);
 
@@ -18,6 +18,5 @@ int main(void)
 		write(1, &str[count], 1);
 		count++;
 	}
-	putchar('\n');
 	return (0);
 }
