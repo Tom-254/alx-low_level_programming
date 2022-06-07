@@ -30,6 +30,6 @@ int main(void)
 		_printchar(str[count]);
 		count++;
 	}
-	_printchar('\n');
+	_printchar(10);
 	return (0);
 }
