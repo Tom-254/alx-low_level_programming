@@ -14,7 +14,7 @@ int main(void)
 
 	while (count < size)
 	{
-		putchar(str[count]);
+		write(1, &str[count], 1)
 		count++;
 	}
 	return (0);
