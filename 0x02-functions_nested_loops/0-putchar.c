@@ -28,10 +28,8 @@ int main(void)
 	while (count < size)
 	{
 		printchar(str[count]);
-		gets();
 		count++;
 	}
 	printchar('\n');
-	gets();
 	return (0);
 }
