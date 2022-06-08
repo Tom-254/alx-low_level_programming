@@ -12,12 +12,11 @@ int main(void)
 	int count = 0;
 	int size = sizeof(str);
 
-	while (count <= size)
+	while (count < size)
 	{
-		if (str[count] != '\0')
-			putchar(str[count]);
-		putchar('\n');
+		putchar(str[count]);
 		count++;
 	}
+	putchar('\n');
 	return (0);
 }
