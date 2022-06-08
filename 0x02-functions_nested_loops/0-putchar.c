@@ -9,12 +9,7 @@
  */
 int main(void)
 {
-	int i;
-	char str[] = "_putchar";
-	long int size = sizeof(str);
-
-	for (i = 0; i < size - 1; i++)
-		_putchar(str[i]);
-	_putchar('\n');
+	write(1, "_putchar", sizeof(str)-1);
+	write(1, '\n', 1);
 	return (0);
 }
