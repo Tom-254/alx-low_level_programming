@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char newline = '\n';
+	char newline ='0x0A';
 
 	write(1, "_putchar", sizeof("_putchar"));
 	write(1, &newline, 1);
