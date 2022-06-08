@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 
 /**
  * print_long - writes to stdout
@@ -13,6 +12,18 @@ void print_long(long value)
 		print_long(value / 10);
 		putchar((value % 10) + '0');
 	}
+}
+
+/**
+ * print_char - writes to stdout
+ *
+ * Return: void
+ */
+void print_char(void)
+{
+	putchar(',');
+	putchar(' ');
+	putchar(' ');
 }
 
 /**
@@ -32,11 +43,12 @@ void times_table(void)
 
 			if (result >= 1 && result < 10)
 			{
-				write(1, ",  ", sizeof(",  ") - 1);
+				print_char();
 			}
 			else if (result >= 10)
 			{
-				write(1, ", ", sizeof(", ") - 1);
+				putchar(',');
+				putchar(' ');
 			}
 
 			if (result == 0)
@@ -53,10 +65,9 @@ void times_table(void)
 			}
 			else if (c == 0)
 			{
-				write(1, ",  ", sizeof(",  ") - 1);
+				print_char();
 			}
 		}
 		c++;
 	}
 }
-
