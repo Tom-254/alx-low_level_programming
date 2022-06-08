@@ -8,7 +8,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int print_to_98(int n)
+void print_to_98(int n)
 {
 	while (n <= 98)
 	{
