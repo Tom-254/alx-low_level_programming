@@ -9,7 +9,9 @@
  */
 int main(void)
 {
+	char newline = '\n';
+
 	write(1, "_putchar", sizeof("_putchar"));
-	putchar('\n');
+	write(1, &newline, 1);
 	return (0);
 }
