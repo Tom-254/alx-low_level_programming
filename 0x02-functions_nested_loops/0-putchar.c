@@ -9,8 +9,6 @@
  */
 int main(void)
 {
-	char newline ='0x0A';
-
 	write(1, "_putchar", sizeof("_putchar"));
 	write(1, "\n", 1);
 	return (0);
