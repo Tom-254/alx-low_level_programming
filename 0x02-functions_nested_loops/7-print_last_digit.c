@@ -12,4 +12,5 @@ void print_last_digit(int value)
 		value = -value;
 	}
 	putchar(value % 10 + '0');
+	return (value);
 }
