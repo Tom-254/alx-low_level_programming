@@ -5,7 +5,7 @@
  * @value: The value to print
  * Return: On success 1.
  */
-void print_last_digit(int value)
+int print_last_digit(int value)
 {
 	if (value < 0)
 	{
