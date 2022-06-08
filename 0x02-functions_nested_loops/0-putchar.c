@@ -17,6 +17,6 @@ int main(void)
 		putchar(str[count]);
 		count++;
 	}
-	putchar('\n');
+	putchar('\x0A');
 	return (0);
 }
