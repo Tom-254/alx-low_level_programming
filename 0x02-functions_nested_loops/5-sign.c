@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <ctype.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_sign - writes the character c to stdout
