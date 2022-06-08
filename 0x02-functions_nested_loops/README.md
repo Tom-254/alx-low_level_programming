@@ -6,3 +6,4 @@
 - 5-sign.c ==>	 prints the sign of a number
 - 6-abs.c ==>	 computes the absolute value of an integer
 - 10-add.c ==>	adds two integers and returns the result.
+- 9-times_table.c ==>	prints the 9 times table, starting with 0
