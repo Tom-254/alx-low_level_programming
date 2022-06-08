@@ -15,11 +15,11 @@ void print_long(long value)
 }
 
 /**
- * main - writes to stdout
+ * times_table - writes to stdout
  *
  * Return: On success 1.
  */
-int main(void)
+void times_table(void)
 {
 	int c = 0, z;
 
@@ -49,5 +49,4 @@ int main(void)
 		}
 		c++;
 	}
-	return (0);
 }
