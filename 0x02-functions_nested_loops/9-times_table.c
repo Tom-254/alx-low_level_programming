@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * print_long - writes to stdout
@@ -29,9 +30,13 @@ void times_table(void)
 		{
 			int result = z * c;
 
-			if (result < 10)
+			if (result >= 1 && result < 10)
 			{
-				putchar(' ');
+				write(1, ",  ", sizeof(",  ") - 1);
+			}
+			else if (result >= 10)
+			{
+				write(1, ", ", sizeof(", ") - 1);
 			}
 
 			if (result == 0)
@@ -44,12 +49,11 @@ void times_table(void)
 			}
 			if (z == 9)
 			{
-				printf("\n");
+				putchar("\n");
 			}
-			else
+			else if (c == 0)
 			{
-				putchar(',');
-				putchar(' ');
+				write(1, ",  ", sizeof(",  ") - 1);
 			}
 		}
 		c++;
