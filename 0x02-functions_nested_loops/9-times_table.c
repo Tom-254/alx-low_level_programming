@@ -49,7 +49,7 @@ void times_table(void)
 			}
 			if (z == 9)
 			{
-				putchar("\n");
+				putchar('\n');
 			}
 			else if (c == 0)
 			{
