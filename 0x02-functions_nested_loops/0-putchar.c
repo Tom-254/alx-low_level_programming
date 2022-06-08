@@ -21,15 +21,6 @@ int _printchar(char c)
  */
 int main(void)
 {
-	char str[] = "_putchar";
-	int count = 0;
-	int size = sizeof(str);
-
-	while (count < size)
-	{
-		_printchar(str[count]);
-		count++;
-	}
-	_printchar(10);
+	_printchar("_putchar\n");
 	return (0);
 }
