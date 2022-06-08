@@ -29,6 +29,11 @@ void times_table(void)
 		{
 			int result = z * c;
 
+			if (result < 10)
+			{
+				putchar(' ');
+			}
+
 			if (result == 0)
 			{
 				putchar('0');
