@@ -27,7 +27,7 @@ int main(void)
 
 	while (count < size)
 	{
-		printchar(str[count]);
+		putchar(str[count] + '0');
 		count++;
 	}
 	printchar('\n');
