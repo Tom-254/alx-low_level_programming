@@ -25,8 +25,7 @@ int main(void)
 
 	while (c <= 9)
 	{
-		z = 0;
-		for (z; z <= 9; z++)
+		for (z = 0; z <= 9; z++)
 		{
 			int result = z * c;
 
