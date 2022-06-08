@@ -1,5 +1,18 @@
 #include "main.h"
 #include <stdio.h>
+#include <unistd.h>
+
+/**
+ * printchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int printchar(char c)
+{
+	return (write(0, &c, 1));
+}
 
 /**
  * main - writes to stdout
@@ -14,9 +27,11 @@ int main(void)
 
 	while (count < size)
 	{
-		putchar(str[count]);
+		printchar(str[count]);
+		gets();
 		count++;
 	}
-	putchar('\x0A');
+	printchar('\n');
+	gets();
 	return (0);
 }
