@@ -7,3 +7,4 @@
 - 6-abs.c ==>	 computes the absolute value of an integer
 - 10-add.c ==>	adds two integers and returns the result.
 - 9-times_table.c ==>	prints the 9 times table, starting with 0
+- 7-print_last_digit.c ==>	prints the last digit of a number.
