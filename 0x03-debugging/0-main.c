@@ -8,7 +8,7 @@ int main(void)
 {
 	int i;
 
-	i = 0;
-	positive_or_negative(i);
+	i = positive_or_negative(0);
+	printf("%d", i);
 	return (0);
 }
