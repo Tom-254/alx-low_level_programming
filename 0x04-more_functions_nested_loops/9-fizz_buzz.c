@@ -1,17 +1,4 @@
-#include "main.h"
-
-/**
-* print - display integers using _putchar
-* @number: number to display
-* Return: void
-*/
-
-void print(int number)
-{
-	if (number / 10)
-		print(number / 10);
-	_putchar(number % 10 + '0');
-}
+#include <stdio.h>
 
 /**
 * fizz_buzz - fizBuzz challenge
