@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* print_numbers - prints the numbers, from 0 to 9, followed by a new line.
+* print_most_numbers - prints the numbers, from 0 to 9, followed by a new line.
 * Return: void
 */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int i;
 
@@ -17,15 +17,4 @@ void print_numbers(void)
 		}
 	}
 	_putchar('\n');
-}
-
-int main(void)
-{
-	char c;
-
-	c = 'A';
-	printf("%c: %d\n", c, print_numbers(c));
-	c = 'a';
-	printf("%c: %d\n", c, print_numbers(c));
-	return (0);
 }
