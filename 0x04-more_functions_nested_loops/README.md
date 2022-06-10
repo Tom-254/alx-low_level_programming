@@ -3,3 +3,4 @@
 - 9-fizz_buzz.c ==>	fizBuzz challenge
 - 8-print_square.c ==>	prints a square, followed by a new line.
 - 7-print_diagonal.c ==>	draws a diagonal line on the terminal.
+- 6-print_line.c ==>	that draws a straight line in the terminal.
