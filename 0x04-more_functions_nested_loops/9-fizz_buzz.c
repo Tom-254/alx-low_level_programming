@@ -23,3 +23,14 @@ void fizz_buzz(void)
 	}
 	printf("\n");
 }
+
+/**
+* main - fizBuzz challenge
+* Return: always (0)
+*/
+
+int main(void)
+{
+	fizz_buzz();
+	return (0);
+}
