@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
 * fizz_buzz - fizBuzz challenge
@@ -21,7 +20,7 @@ void fizz_buzz(void)
 		else
 			printf("%d ", i);
 	}
-	printf("\n");
+	putchar('\n');
 }
 
 /**
@@ -34,3 +33,4 @@ int main(void)
 	fizz_buzz();
 	return (0);
 }
+
