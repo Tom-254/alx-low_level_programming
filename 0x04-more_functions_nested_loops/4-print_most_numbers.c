@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
 * print_numbers - prints the numbers, from 0 to 9, followed by a new line.
@@ -17,4 +17,15 @@ void print_numbers(void)
 		}
 	}
 	_putchar('\n');
+}
+
+int main(void)
+{
+	char c;
+
+	c = 'A';
+	printf("%c: %d\n", c, print_numbers(c));
+	c = 'a';
+	printf("%c: %d\n", c, print_numbers(c));
+	return (0);
 }
