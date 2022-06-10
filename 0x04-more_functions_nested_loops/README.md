@@ -1,2 +1,3 @@
 - 10-print_triangle.c ==>	prints a triangle, followed by a new line.
 - 10-print_triangle.c ==>	prints a triangle, followed by a new line.
+- 9-fizz_buzz.c ==>	fizBuzz challenge
