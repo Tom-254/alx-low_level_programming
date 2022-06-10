@@ -21,15 +21,5 @@ void fizz_buzz(void)
 		else
 			printf("%d ", i);
 	}
-}
-
-/**
-* main - fizBuzz challenge
-* Return: always (0)
-*/
-
-int main(void)
-{
-	fizz_buzz();
-	return (0);
+	printf("\n");
 }
