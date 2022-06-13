@@ -27,6 +27,6 @@ void puts2(char *str)
 	}
 	else
 	{
-		_putchar(*str);
+		_putchar(' ');
 	}
 }
