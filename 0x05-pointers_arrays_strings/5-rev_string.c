@@ -2,13 +2,17 @@
 
 /**
  * rev_string - reverses a string.
- * @s: points to to s
+ * @*s: points to to s
  * Return: nothing
  */
 
 void rev_string(char *s)
 {
 	int count = 0, i;
+	char *begin, *end, temp;
+
+	begin = s;
+	end = s;
 
 	while (*s != '\0')
 	{
@@ -16,9 +20,16 @@ void rev_string(char *s)
 		count++;
 	}
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < count - 1 ; i++)
+		end++;
+
+	for (i = 0; i < count / 2 ; i++)
 	{
-		s--;
-		_putchar(*s);
+		temp = *end;
+		*end = *begin;
+		*begin = temp;
+
+		begin++;
+		end--;
 	}
 }
