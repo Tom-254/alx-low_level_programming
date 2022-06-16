@@ -15,13 +15,13 @@ char *cap_string(char *str)
 	for (i = 0; *str != '\0'; str++, i++)
 	{
 
-		if (!(*str >= 'a' && *str <= 'z' || *str >= 48 && *str <= 57 ||
-			*str >= 'A' && *str <= 'Z'))
+		if (!((*str >= 'a' && *str <= 'z') || (*str >= 48 && *str <= 57) ||
+			(*str >= 'A' && *str <= 'Z')))
 		{
 			next_char = *(str + 1);
 
-			if (!(next_char  >= 'A' && next_char <= 'Z' ||
-				next_char >= 48 && next_char <= 57) &&
+			if (!((next_char  >= 'A' && next_char <= 'Z') ||
+				(next_char >= 48 && next_char <= 57)) &&
 				!(next_char == '\t' || next_char == '\n' || next_char == ' '))
 			{
 				str++;
