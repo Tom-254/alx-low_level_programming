@@ -2,37 +2,25 @@
 
 /**
  * leet - encodes a string into 1337.
- * @str: string to encode
+ * @s: string to encode
  * Return: character pointer
  */
 
-char *leet(char *str)
+char *leet(char *s)
 {
-	char *ptr = str;
+	int i;
+	int j;
+	char l[] = "ol_ea__t";
 
-	for (; *str; str++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*str == 'a' || *str == 'A')
+		for (j = 0; l[j] != '\0'; j++)
 		{
-			*str = '4';
+			if (s[i] == l[j] || s[i] == (l[j] - 32))
+			{
+				s[i] = j + '0';
+			}
 		}
-		else if (*str == 'e' || *str == 'E')
-		{
-			*str = '3';
-		}
-		else if (*str == 'o' || *str == 'O')
-		{
-			*str = '0';
-		}
-		else if (*str == 't' || *str == 'T')
-		{
-			*str = '7';
-		}
-		else if (*str == 'l' || *str == 'L')
-		{
-			*str = '1';
-		}
-		printf("%c", *str);
 	}
-	return (ptr);
+	return (s);
 }
