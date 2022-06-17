@@ -5,29 +5,27 @@
  * @str: string to capitalize.
  * Return: character pointer
  */
-
 char *cap_string(char *str)
 {
 	int i;
-	char next_char;
+	char cur_value, next_char;
 	char *ptr = str;
 
-	for (i = 0; *str != '\0'; str++, i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-
-		if (!((*str >= 'a' && *str <= 'z') || (*str >= 48 && *str <= 57) ||
-			(*str >= 'A' && *str <= 'Z')))
+		if (!((str[i] >= 'a' && str[i] <= 'z') ||
+			(str[i] >= 48 && str[i] <= 57) ||
+			(str[i] >= 'A' && str[i] <= 'Z')))
 		{
-			next_char = *(str + 1);
-
-			if (!((next_char  >= 'A' && next_char <= 'Z') ||
-				(next_char >= 48 && next_char <= 57)) &&
-				!(next_char == '\t' || next_char == '\n' || next_char == ' '))
+			next_char = i + 1;
+			if (!((str[next_char]  >= 'A' && str[next_char] <= 'Z') ||
+				(str[next_char] >= 48 && str[next_char] <= 57)) &&
+				!(str[next_char] == '\t' || str[next_char] == '\n'
+					|| str[next_char] == ' '))
 			{
-				str++;
-				if (*str >= 'a' && *str <= 'z')
+				if (str[next_char] >= 'a' && str[next_char] <= 'z')
 				{
-					*(str) = *(str) - 32;
+					str[next_char] = str[next_char] - 32;
 				}
 			}
 		}
