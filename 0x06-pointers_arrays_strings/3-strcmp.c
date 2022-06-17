@@ -23,7 +23,7 @@ int _strcmp(char *s1, char *s2)
 			flag = s1[i] - s2[i];
 			break;
 		}
-		flag = s[i] - s2[i];
+		flag = s1[i] - s2[i];
 		i++;
 	}
 
