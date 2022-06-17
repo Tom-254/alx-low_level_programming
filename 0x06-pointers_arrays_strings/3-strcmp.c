@@ -24,12 +24,8 @@ int _strcmp(char *s1, char *s2)
 			break;
 		}
 		i++;
+
 	}
 
-	if (flag == -15)
-		return (-15);
-	else if (flag == 15)
-		return (15);
-	else
-		return (flag);
+	return (flag);
 }
