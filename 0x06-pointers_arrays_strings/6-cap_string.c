@@ -13,20 +13,29 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (!((str[i] >= 'a' && str[i] <= 'z') ||
-			(str[i] >= 48 && str[i] <= 57) ||
-			(str[i] >= 'A' && str[i] <= 'Z')))
+		if (i != 0)
 		{
-			next_char = i + 1;
-			if (!((str[next_char]  >= 'A' && str[next_char] <= 'Z') ||
-				(str[next_char] >= 48 && str[next_char] <= 57)) &&
-				!(str[next_char] == '\t' || str[next_char] == '\n'
-					|| str[next_char] == ' '))
+			if ((str[i] == '\t' ||
+				str[i] == '\n'
+				|| str[i] == ' ' || str[i] == ','
+				|| str[i] == ';' || str[i] == '.'
+				|| str[i] == '!' || str[i] == '?'
+				|| str[i] == '"' || str[i] == '('
+				|| str[i] == ')' || str[i] == '{'
+				|| str[i] == '}'))
 			{
+				next_char = i + 1;
 				if (str[next_char] >= 'a' && str[next_char] <= 'z')
 				{
 					str[next_char] = str[next_char] - 32;
 				}
+			}
+		}
+		else
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] = str[i] - 32;
 			}
 		}
 	}
