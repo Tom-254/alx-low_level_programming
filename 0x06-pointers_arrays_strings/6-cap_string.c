@@ -8,7 +8,7 @@
 char *cap_string(char *str)
 {
 	int i;
-	char cur_value, next_char;
+	int next_char;
 	char *ptr = str;
 
 	for (i = 0; str[i] != '\0'; i++)
