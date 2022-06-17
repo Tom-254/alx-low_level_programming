@@ -15,16 +15,16 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] <  s2[i])
 		{
-			flag = -15;
+			flag = s1[i] - s2[i];
 			break;
 		}
 		else if (s1[i] > s2[i])
 		{
-			flag = 15;
+			flag = s1[i] - s2[i];
 			break;
 		}
+		flag = s[i] - s2[i];
 		i++;
-
 	}
 
 	return (flag);
