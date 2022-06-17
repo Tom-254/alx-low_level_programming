@@ -16,20 +16,20 @@ int _strcmp(char *s1, char *s2)
 		if (s1[i] <  s2[i])
 		{
 			flag = -15;
-			return (flag);
+			break;
 		}
 		else if (s1[i] > s2[i])
 		{
 			flag = 15;
-			return (flag);
-		}
-		else if (s1[i] == s2[i])
-		{
-			flag = 0;
+			break;
 		}
 		i++;
-
 	}
 
-	return (flag);
+	if (flag == -15)
+		return (-15);
+	else if (flag == 15)
+		return (15);
+	else
+		return (flag);
 }
