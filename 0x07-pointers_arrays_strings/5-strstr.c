@@ -28,6 +28,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			else
 				break;
+			
 		}
 	}
 	return (NULL);
