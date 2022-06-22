@@ -2,7 +2,7 @@
 
 
 /**
- * _sqrt_recursion -   returns the natural square root of a number.
+ * find_square_number -   returns the natural square root of a number.
  * @original: number to return square root
  * @starting: number to reduce to find square root;
  * Return: returns the natural square root of a number.
