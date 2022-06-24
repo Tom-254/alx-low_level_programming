@@ -1,0 +1,14 @@
+#include "main.h"
+
+/**
+ * main -  prints number arguments.
+ * @argc: count of argv items
+ * @argv: array of strings of arguments
+ * Return: Nothing
+ */
+
+void main(int argc __attribute__((unused)), char **argv)
+{
+	if (argc != 1)
+		printf("%d\n", argc);
+}
