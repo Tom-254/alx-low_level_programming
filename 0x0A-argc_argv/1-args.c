@@ -7,7 +7,7 @@
  * Return: integer
  */
 
-int main(int argc __attribute__((unused)), char **argv argc __attribute__((unused)))
+int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
 	if (argc != 1)
 		printf("%d\n", argc);
