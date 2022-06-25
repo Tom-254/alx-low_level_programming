@@ -4,11 +4,12 @@
  * main -  prints number arguments.
  * @argc: count of argv items
  * @argv: array of strings of arguments
- * Return: Nothing
+ * Return: integer
  */
 
-void main(int argc __attribute__((unused)), char **argv)
+int main(int argc __attribute__((unused)), char **argv)
 {
 	if (argc != 1)
 		printf("%d\n", argc);
+	return (0);
 }
