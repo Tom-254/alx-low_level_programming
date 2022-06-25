@@ -9,7 +9,7 @@
 
 int main(int argc __attribute__((unused)), char **argv)
 {
-	int i, mul;
+	int mul;
 
 	if (argc != 3)
 	{
