@@ -2,3 +2,4 @@
 - 3-alloc_grid.c ==>	 returns a pointer to a 2 dimensional array of integers.
 - 2-str_concat.c ==>	 concatenates two strings.
 - 1-strdup.c ==>	 returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
+- 0-create_array.c ==>	 that creates an array of chars, and initializes it with a specific char.
