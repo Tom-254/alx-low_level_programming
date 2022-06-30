@@ -11,7 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concated;
-	unsigned int s1count = 0, s2count = 0, text_count = 0, i;
+	unsigned int s1count = 0, s2count = 0, text_count = 0, i, j;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -33,10 +33,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!(n >= s2count))
 		s2count = n;
 
-	s1count = 0;
-	while (s1[s1count] != '\0')
+	j = 0;
+	while (j < s1count)
 	{
-		concated[text_count++] = s1[s1count++];
+		concated[text_count++] = s1[j++];
 	}
 
 	for (i = 0; i < s2count; i++)
