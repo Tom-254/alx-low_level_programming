@@ -30,8 +30,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (concated == NULL)
 		return (NULL);
 
-	if (n >= s2count)
-		n = s2count;
+	if (!(n >= s2count))
+		s2count = n;
 
 	s1count = 0;
 	while (s1[s1count] != '\0')
@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		concated[text_count++] = s1[s1count++];
 	}
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < s2count; i++)
 	{
 		concated[text_count++] = s2[i];
 	}
