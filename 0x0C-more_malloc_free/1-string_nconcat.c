@@ -19,30 +19,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[s1count] != '\0')
+	while (s1[s1count])
 		s1count++;
 
-	while (s2[s2count] != '\0')
+	while (s2[s2count])
 		s2count++;
+
+	if (s2count > n)
+		s2count = n;
 
 	concated = malloc(sizeof(char) * (s1count + s2count + 1));
 
 	if (concated == NULL)
 		return (NULL);
 
-	if (s2count > n)
-		s2count = n;
-
-	j = 0;
-	while (j < s1count)
-	{
-		concated[text_count++] = s1[j++];
-	}
+	for (j = 0; j < s1count; j++)
+		concated[text_count++] = s1[j];
 
 	for (i = 0; i < s2count; i++)
-	{
 		concated[text_count++] = s2[i];
-	}
 
 	concated[text_count] = '\0';
 
