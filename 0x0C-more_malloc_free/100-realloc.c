@@ -1,4 +1,4 @@
-#include "main.h";
+#include "main.h"
 
 /**
  * _realloc -  reallocates a memory block using malloc and free
@@ -10,7 +10,8 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *new_ptr;
+	char *new_ptr;
+	char *old_ptr = ptr;
 	unsigned int i;
 
 	if (new_size == old_size)
@@ -35,8 +36,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 
 	for (i = 0; i < old_size; i++)
-		new_ptr[i] = ptr[i];
+		new_ptr[i] = old_ptr[i];
 
-	free(ptr);
+	free(old_ptr);
 	return (new_ptr);
 }
