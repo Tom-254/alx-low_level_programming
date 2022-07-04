@@ -1,4 +1,4 @@
-#include "dog.h"
+clude "dog.h"
 
 /**
  * _strdup -  returns a pointer to a
@@ -11,30 +11,24 @@
 
 char *_strdup(char *str)
 {
-	char *c;
-	int count = 0, i;
+	char *ar;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
 	if (str == NULL)
 		return (NULL);
-
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-
-	count++;
-
-	c = malloc(sizeof(char) * count);
-
-	if (c == NULL)
+	while (str[i])
+		i++;
+	ar = malloc(sizeof(char) * (i + 1));
+	if (ar == NULL)
 		return (NULL);
-
-	for (i = 0; i <= count; i++)
+	while (str[j])
 	{
-		c[i] = str[i];
+		ar[j] = str[j];
+		j++;
 	}
-
-	return (c);
+	ar[j] = 0;
+	return (ar);
 
 }
 
