@@ -46,7 +46,7 @@ char *_strdup(char *str)
  * Return: NULL if function fails
  */
 
-dog_t *new_dog(char *name, float age, char *owner);
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 	char *name_copy, *owner_copy;
