@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	printf("%d\n", calc(argv[1], argv[3]));
+	printf("%d\n", calc(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
 }
