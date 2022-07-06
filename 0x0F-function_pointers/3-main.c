@@ -9,7 +9,6 @@
 
 int main(int argc, char **argv)
 {
-	int func_calc;
 	int (*calc)(int, int);
 
 	if  (argc < 4)
@@ -18,14 +17,14 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	func_calc = get_op_func(argv[2]);
-	if (func_calc == NULL)
+	calc = get_op_func(argv[2]);
+	if (calc == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", func_calc(argv[1], argv[3]));
+	printf("%d\n", calc(argv[1], argv[3]));
 
 	return (0);
 }
