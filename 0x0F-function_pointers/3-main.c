@@ -24,6 +24,12 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
+	if ((argv[2] == 37 || argv[2] == 47) && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	printf("%d\n", calc(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
