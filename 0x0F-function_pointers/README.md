@@ -2,3 +2,4 @@
 - 1-array_iterator.c ==>	executes a function given as a parameter on each element of an array.
 - 2-int_index.c ==>	 searches for an integer.
 - 3-calc.h ==>	header for the simple calculator
+- 3-get_op_func.c ==>	selects the correct function to perform the operation asked by the user
