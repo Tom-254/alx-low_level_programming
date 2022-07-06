@@ -3,3 +3,4 @@
 - 2-int_index.c ==>	 searches for an integer.
 - 3-calc.h ==>	header for the simple calculator
 - 3-get_op_func.c ==>	selects the correct function to perform the operation asked by the user
+- 3-main.c ==>	Entry point of the function
