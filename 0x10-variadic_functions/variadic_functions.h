@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 /*
- * struct to_check - stores datatype and its function
+ * struct to_check -stores datatype and its function
  * @check: type to print
  * @func: pointer to a function for checking
  *
@@ -17,10 +17,10 @@ struct to_check
 	char *check;
 
 	void *(func)(va_list ap);
-}
+};
 
 /**
- * check_types - Typedef for unsigned int
+ * check_types - Typedef for struct to_check
  */
 typedef struct to_check check_types;
 
