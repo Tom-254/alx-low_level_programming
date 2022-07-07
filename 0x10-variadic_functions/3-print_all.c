@@ -5,16 +5,16 @@
  * @ap: va_list type
  * Return: nothing
  */
-void check_char(va_ap ap)
+void check_char(va_list ap)
 {
-	printf("%c", va_arg(ap, char));
+	printf("%c", va_arg(ap, int));
 }
 /**
  * check_int - prints the int
  * @ap: va_list type
  * Return: nothing
  */
-void check_int(va_ap ap)
+void check_int(va_list ap)
 {
 	printf("%i", va_arg(ap, int));
 }
@@ -23,16 +23,16 @@ void check_int(va_ap ap)
  * @ap: va_list type
  * Return: nothing
  */
-void check_float(va_ap ap)
+void check_float(va_list ap)
 {
-	printf("%f", va_arg(ap, float));
+	printf("%f", va_arg(ap, double));
 }
 /**
  * check_string - prints the string
  * @ap: va_list type
  * Return: nothing
  */
-void check_string(va_ap ap)
+void check_string(va_list ap)
 {
 	char *str;
 
@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 			if (format[pos] == *types[loop_pos].check)
 			{
 				printf("%s", sep);
-				types[loop_pos].f(ap);
+				types[loop_pos].func(ap);
 				sep = ", ";
 			}
 			loop_pos++;
@@ -80,4 +80,4 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(ap);
-
+}
