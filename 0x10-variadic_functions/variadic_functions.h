@@ -16,7 +16,7 @@ struct to_check
 {
 	char *check;
 
-	void *(func)(va_list ap);
+	void (*func)(va_list ap);
 };
 
 /**
