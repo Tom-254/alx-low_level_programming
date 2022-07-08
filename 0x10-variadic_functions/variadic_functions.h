@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-/*
+/**
  * struct to_check - stores datatype and its function
  * @check: type to print
  * @func: pointer to a function for checking
