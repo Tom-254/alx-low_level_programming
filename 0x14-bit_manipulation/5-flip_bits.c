@@ -22,7 +22,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		if (diff & bit_mask)
 			count_flipped++;
-		diff = diff >> bit_mask;
+		diff = diff << bit_mask;
 	}
 	return (count_flipped);
 }
