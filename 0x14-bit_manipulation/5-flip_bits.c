@@ -20,9 +20,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		return (0);
 	while (diff)
 	{
-		if (diff & bit_mask)
+		if (bit_mask == (diff & bit_mask))
 			count_flipped++;
-		diff = diff << bit_mask;
+		diff = diff >> bit_mask;
 	}
 	return (count_flipped);
 }
