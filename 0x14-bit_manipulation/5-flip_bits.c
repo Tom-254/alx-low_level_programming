@@ -12,17 +12,17 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int diff = n ^ m;
-	unsigned int count_flipped = 0;
-	unsigned long int bit_mask = 1;
+	unsigned long int diff, check;
+	unsigned int count, i;
 
-	if (!n || !m)
-		return (0);
-	while (diff)
+	count = 0;
+	check = 1;
+	diff = n ^ m;
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
-		if (bit_mask == (diff & bit_mask))
-			count_flipped++;
-		diff = diff >> bit_mask;
+		if (check == (diff & check))
+			count++;
+		check <<= 1;
 	}
-	return (count_flipped);
+	return (count);
 }
