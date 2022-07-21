@@ -1,1 +1,2 @@
 - 0-binary_to_uint.c ==>	converts a binary number to an unsigned int.
+- 1-print_binary.c ==>	converts a binary number to an unsigned int.
