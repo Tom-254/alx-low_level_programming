@@ -12,10 +12,11 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int diff;
+	unsigned long int diff, flipped;
 	unsigned int count, i;
 
 	count = 0;
+	flipped = 1;
 	diff = n ^ m;
 	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
