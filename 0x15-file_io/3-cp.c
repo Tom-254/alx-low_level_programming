@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 			error_message(99, "write", argv[2], -1);
 	}
 	if (rd == -1)
-		exit_status(98, "read", argv[1], -1);
+		error_message(98, "read", argv[1], -1);
 	c_file_f = close(file_f);
 	c_file_t = close(file_t);
 	if (c_file_f == -1)
