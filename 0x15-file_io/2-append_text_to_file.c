@@ -33,10 +33,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	for (file_length = 0; text_content[file_length], file_length++)
+	for (file_length = 0; text_content[file_length]; file_length++)
 	{}
 
-	wc = write(fd, text_content, file_length)
+	wc = write(fd, text_content, file_length);
 	if (wc == -1)
 	{
 		close(fd);
