@@ -48,11 +48,9 @@ int main(int argc, char *argv[])
 	if (file_f == -1)
 		error_message(98, "read", argv[1], -1);
 	file_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	while (1)
+	while (rd > 0)
 	{
 		rd = read(file_f, string_buffer, BUFSIZ);
-		if (rd == 0)
-			break;
 		if (file_t == -1 || (write(file_t, string_buffer, rd)) != rd)
 			error_message(99, "write", argv[2], -1);
 	}
