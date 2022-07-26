@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	file_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
 	while (rd > 0)
-		rd = read(file_f, buff, BUFSIZ;
+		rd = read(file_f, buff, BUFSIZ);
 		if (file_t == -1 || (write(file_t, buff, rd) != rd))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
