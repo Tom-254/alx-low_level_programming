@@ -1,50 +1,70 @@
 #include "main.h"
 
 /**
+ * error_message - formats errors
+ * @exit_status: to exit func
+ * @message: error message
+ * @argument: command line argument
+ * @fd: file descriptor
+ *
+ * Return: nothing
+ */
+
+void error_message(int exit_status, char *message, char *argument, int fd)
+{
+	if (exit_status == 97)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(exit_status);
+	}
+	else if (exit_status == 100)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(exit_status);
+	}
+	else
+	{
+		dprintf(STDERR_FILENO, "Error: Can't %s from file %s\n", message, argument);
+		exit(exit_status);
+	}
+}
+
+/**
  * main - copies the content of one file to another
  * @argc: argument count
  * @argv: argument vector
  *
  * Return: 0 if success
  */
+
 int main(int argc, char *argv[])
 {
-	int ffrom, fto, rd, clf, clt;
-	char buff[BUFSIZ];
-	mode_t file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	int file_f, file_t, rd, c_file_f, c_file_t;
+	char string_buffer[BUFSIZ];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	ffrom = open(argv[1], O_RDONLY);
-	if (ffrom  == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	fto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
-	while ((rd = read(ffrom, buff, BUFSIZ)) > 0)
-		if (fto == -1 || (write(fto, buff, rd) != rd))
+		error_message(97, "none", "none", -1);
+	file_f = open(argv[1], O_RDONLY);
+	if (file_f == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+	file_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	while ((rd = read(file_f, buff, BUFSIZ)) > 0)
+		if (file_t == -1 || (write(file_t, buff, rd) != rd))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	if (rd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	clf = close(ffrom);
-	clt = close(fto);
-	if (clf == -1 || clt == -1)
-	{
-		if (clf == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ffrom);
-		else if (clt == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fto);
-		exit(100);
-	}
+		error_message(98, "read", argv[1], -1);
+	c_file_f = close(file_f);
+	c_file_t = close(file_t);
+	if (c_file_f == -1)
+		error_message(100, "none", "none", file_f);
+	if (c_file_t == -1)
+		error_message(100, "none", "none", file_t);
+
 	return (0);
 }
