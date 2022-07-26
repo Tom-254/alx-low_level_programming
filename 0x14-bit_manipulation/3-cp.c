@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * main - copies the content of one file to another
  * @argc: argument count
