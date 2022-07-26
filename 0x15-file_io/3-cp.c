@@ -29,6 +29,7 @@ void error_message(int exit_status, char *message, char *argument, int fd)
 	}
 }
 
+
 /**
  * main - copies the content of one file to another
  * @argc: argument count
