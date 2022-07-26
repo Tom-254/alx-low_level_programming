@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int ffrom, fto, rd, clf, clt;
 	char buff[BUFSIZ];
+	mode_t file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
 	{
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
 	while ((rd = read(ffrom, buff, BUFSIZ)) > 0)
 		if (fto == -1 || (write(fto, buff, rd) != rd))
 		{
