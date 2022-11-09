@@ -1,6 +1,7 @@
-# -*- MakeFile -*-
+# 2-Makefile
+
 CC = gcc
-SRC = main.c school.c
+SRC = main.c school
 OBJ = $(SRC:.c=.o)
 NAME = school
 
