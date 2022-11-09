@@ -5,5 +5,5 @@ SRC = main.c holberton.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 
-all: ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
