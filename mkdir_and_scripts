@@ -1,0 +1,22 @@
+#!/bin/bash
+allThreads=("search_algos.h" "0-linear.c
+" "1-binary.c" "2-O" "3-O" "4-O" "5-O" "6-O" "100-jump.c" "101-O" "102-interpolation.c" "103-exponential.c" "104-advanced_binary.c" "105-jump_list.c" "106-linear_skip.c" "107-O" "108-O")
+
+mkdir -p "0x1E-search_algorithms"
+
+for t in ${allThreads[@]}; do
+
+    if [[ $t == *".py"* ]]; then
+        echo -e "#!/usr/bin/python3\n" > "./0x1E-search_algorithms/$t" && chmod +x "./0x1E-search_algorithms/$t"
+    else
+        echo -e "#include \"search_algos.h\"\n" > "./0x1E-search_algorithms/$t"
+        # touch "./0x1E-search_algorithms/$t"
+    fi
+
+done
+
+echo -e "# ALX Software Engineering Programme Project: 0x1E. C - Search Algorithms" > "./0x1E-search_algorithms/README.md"
+
+cp "0x15-file_io/correction" "./0x1E-search_algorithms/"
+
+cd /root/alx-low_level_programming/0x1E-search_algorithms
